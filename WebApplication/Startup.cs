@@ -6,7 +6,6 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using WebApplication.Database;
 using WebApplication.Models;
-using ILogger = Neo4j.Driver.ILogger;
 
 namespace WebApplication
 {
@@ -25,7 +24,6 @@ namespace WebApplication
             var loggerFactory = LoggerFactory.Create(x => x.AddConsole());
             var logger = loggerFactory.CreateLogger("Movie Shop");
             services.AddSingleton(logger);
-            services.AddSingleton<ILogger>(new DatabaseLogger(logger));
             services.AddControllersWithViews();
             services.AddRazorPages();
             services.AddSingleton<AppSettingsModel>();
@@ -38,7 +36,6 @@ namespace WebApplication
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseDatabaseErrorPage();
             }
             else
             {

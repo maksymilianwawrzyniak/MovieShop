@@ -1,5 +1,4 @@
 ﻿using System.Diagnostics;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using WebApplication.Database;
@@ -20,22 +19,21 @@ namespace WebApplication.Controllers
 
         public IActionResult Index()
         {
-            Task.Run(async () =>
-            {
-                var resultSummary = await _databaseConnection.CheckDatabaseConnection();
-            });
             return View();
         }
 
         public IActionResult Privacy()
         {
+            _logger.Log(LogLevel.Information, "Privacy page");
             return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
-            return View(new ErrorViewModel {RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier});
+            var errorViewModel = new ErrorViewModel {RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier};
+            _logger.Log(LogLevel.Error, errorViewModel.ToString());
+            return View(errorViewModel);
         }
     }
 }

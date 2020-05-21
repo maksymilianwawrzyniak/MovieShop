@@ -1,0 +1,19 @@
+﻿@model Movie
+
+<div class="container-fluid">
+    <div>
+        <img src="@Model.ThumbnailPath" class="img-thumbnail mx-auto d-block" alt="@Model.Title"/>
+        <div id="buttons" class="row pl-1">
+            <a asp-controller="Admin" asp-action="EditMoviePage" asp-route-id="@Model.Id">
+                <div class="col-6 mb-0">
+                    Edit
+                </div>
+            </a>
+            <a asp-controller="Admin" asp-action="RemoveMovie">
+                <div class="col-6 mb-0">
+                    usuń
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
