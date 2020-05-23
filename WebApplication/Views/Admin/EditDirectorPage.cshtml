@@ -1,0 +1,16 @@
+﻿@model Director
+
+<form method="post" asp-route="EditMovie">
+    <div>
+        <input asp-for="Id" value="@Model.Id" hidden/>
+    </div>
+    <div>
+        <label asp-for="Name"></label>
+        <input asp-for="Name" value="@Model.Name"/>
+    </div>
+    <div>
+        <label asp-for="Surname"></label>
+        <input asp-for="Surname"  value="@Model.Surname"/>
+    </div>
+    <button type="submit" class="btn btn-primary btn-lg">OK</button>
+</form>

@@ -3,18 +3,15 @@ using WebApplication.Models;
 
 namespace WebApplication.ViewModels
 {
-    public class MoviesListViewModel
+    public class AdminMoviesPageModel
     {
-        public MoviesListViewModel()
-        {
-        }
+        public AdminMoviesPageModel() { }
 
-        public MoviesListViewModel(IEnumerable<Movie> movies) : this()
+        public AdminMoviesPageModel(IEnumerable<Movie> movies) : this()
         {
             Movies = movies;
         }
         
         public IEnumerable<Movie> Movies { get; }
-
     }
 }

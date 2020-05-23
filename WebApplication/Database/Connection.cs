@@ -50,7 +50,7 @@ namespace WebApplication.Database
             return results;
         }
 
-        public async Task<T> Find<T>(Tuple<string, string> parameter) where T : BaseModel
+        public async Task<T> Find<T>((string, string) parameter) where T : BaseModel
         {
             var modelName = typeof(T).Name;
             var (key, value) = parameter;
@@ -60,7 +60,9 @@ namespace WebApplication.Database
             query.AppendLine($" {{{key}: '{value}'}})");
             query.Append("RETURN x");
 
-            var cursor = await session.RunAsync(query.ToString());
+            var queryContent = query.ToString();
+            Console.WriteLine(queryContent);
+            var cursor = await session.RunAsync(queryContent);
             var result = (await cursor.SingleAsync()).Map<T>();
             return result;
         }
@@ -83,8 +85,9 @@ namespace WebApplication.Database
             query.Remove(query.Length - 3, 1);
             query.AppendLine("}");
             query.Append("RETURN x");
-
-            var cursor = await session.RunAsync(query.ToString());
+            var queryContent = query.ToString();
+            Console.WriteLine(queryContent);
+            var cursor = await session.RunAsync(queryContent);
             var result = (await cursor.SingleAsync()).Map<T>();
             return result;
         }
@@ -96,10 +99,33 @@ namespace WebApplication.Database
 
             var query = new StringBuilder($"MATCH (x:{modelName} {{Id: '{model.Id}'}})\n");
             query.Append("DELETE x");
-            var cursor = await session.RunAsync(query.ToString());
+            var queryContent = query.ToString();
+            Console.WriteLine(queryContent);
+            var cursor = await session.RunAsync(queryContent);
             await cursor.ConsumeAsync();
         }
 
+        public async Task<string> CreateDirectedRelationship<T, TV>(T fromModel, TV toModel, string relationShipLabel) 
+            where T : BaseModel where TV : BaseModel
+        {
+            var fromModelName = fromModel.GetType().Name;
+            var toModelName = toModel.GetType().Name;
+
+            using var session = DatabaseSession.StartSession(_driver, _appSettings.DatabaseName);
+
+            var query = new StringBuilder($"MATCH (x:{fromModelName}");
+            query.AppendLine($" {{{nameof(fromModel.Id)}: '{fromModel.Id}'}}),");
+            
+            query.Append($"(y:{toModelName}");
+            query.AppendLine($" {{{nameof(fromModel.Id)}: '{fromModel.Id}'}})");
+
+            query.AppendLine($"CREATE (x)-[r:{relationShipLabel}]->(y)");
+            query.AppendLine("RETURN type(r)");
+
+            var cursor = await session.RunAsync(query.ToString());
+            return (await cursor.SingleAsync()).Map<string>();
+        }
+        
         public void Dispose()
         {
             _driver?.Dispose();

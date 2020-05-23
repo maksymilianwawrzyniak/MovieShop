@@ -1,0 +1,25 @@
+﻿@model WebApplication.ViewModels.AdminDirectorsPageModel
+@{
+    ViewData["Title"] = "Directors";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-6">
+            <div class="row">
+                <h3>Directors</h3>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    @await Html.PartialAsync("../Movie/_NewDirectorItemView")
+                </div>
+                @foreach (var director in Model.Directors)
+                {
+                    <div class="col-4">
+                        @await Html.PartialAsync("../Movie/_DirectorItemView", director)
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
