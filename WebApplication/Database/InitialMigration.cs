@@ -2,7 +2,9 @@
 using System.IO;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using WebApplication.Dtos;
 using WebApplication.Models;
+using WebApplication.Utils;
 
 namespace WebApplication.Database
 {
@@ -26,6 +28,8 @@ namespace WebApplication.Database
             await AddModels<Actor>("actors.json");
             await AddModels<Director>("directors.json");
             await AddModels<User>("users.json");
+
+            await AddDirectorMovieRelationship("directors-movies.json");
         }
 
         private async Task DropDatabase()
@@ -40,6 +44,19 @@ namespace WebApplication.Database
             foreach (var model in models)
             {
                 await _connection.Create(model);
+            }
+        }
+
+        private async Task AddDirectorMovieRelationship(string filePath)
+        {
+            var content = await File.ReadAllTextAsync(filePath);
+            var dtos = JsonConvert.DeserializeObject<IEnumerable<DirectorMovieRelationshipDto>>(content);
+            foreach (var dto in dtos)
+            {
+                dto.Director = await _connection.Find<Director>((Constants.Surname, dto.Director.Surname));
+                dto.Movie = await _connection.Find<Movie>((Constants.Title, dto.Movie.Title));
+                if (dto.Movie != null && dto.Director != null)
+                    await _connection.CreateDirectedRelationship(dto.Director, dto.Movie, Constants.DirectedLabel);
             }
         }
     }

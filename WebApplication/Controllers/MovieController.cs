@@ -25,12 +25,11 @@ namespace WebApplication.Controllers
         [Route("/buy", Name = "BuyMovie")]
         public async Task<IActionResult> BuyMovie(string id)
         {
-            const string boughtLabel = "bought";
             var user = SessionUtil.GetUser(_httpContextAccessor);
-            var movie = await _connection.Find<Movie>(("Id", id));
-            var relationships = await _connection.GetRelationshipsBetween(user, movie, boughtLabel);
+            var movie = await _connection.Find<Movie>((Constants.Id, id));
+            var relationships = await _connection.GetRelationshipsBetween(user, movie, Constants.BoughtLabel);
             if (relationships == null || !relationships.GetEnumerator().MoveNext())
-                await _connection.CreateDirectedRelationship(user, movie, boughtLabel);
+                await _connection.CreateDirectedRelationship(user, movie, Constants.BoughtLabel);
             else
                 _logger.Log(LogLevel.Information, $"User {user.Email} already has bought movie {movie.Title}!");
 

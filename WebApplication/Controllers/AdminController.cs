@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using WebApplication.Database;
 using WebApplication.Models;
+using WebApplication.Utils;
 using WebApplication.ViewModels;
 
 namespace WebApplication.Controllers
@@ -55,7 +56,7 @@ namespace WebApplication.Controllers
         
         public async Task<IActionResult> EditMoviePage(string id)
         {
-            var movie = await _connection.Find<Movie>(("Id", id));
+            var movie = await _connection.Find<Movie>((Constants.Id, id));
             return View(movie);
         }
         
@@ -66,7 +67,7 @@ namespace WebApplication.Controllers
         
         public async Task<IActionResult> EditDirectorPage(string id)
         {
-            var director = await _connection.Find<Director>(("Id", id));
+            var director = await _connection.Find<Director>((Constants.Id, id));
             return View(director);
         }
         
@@ -77,7 +78,7 @@ namespace WebApplication.Controllers
         
         public async Task<IActionResult> EditActorPage(string id)
         {
-            var actor = await _connection.Find<Actor>(("Id", id));
+            var actor = await _connection.Find<Actor>((Constants.Id, id));
             return View(actor);
         }
 
@@ -102,7 +103,7 @@ namespace WebApplication.Controllers
         [Route("admin/movie/remove", Name = "RemoveMovie")]
         public async Task<IActionResult> RemoveMovie(string id)
         {
-            var movie = await _connection.Find<Movie>(("Id", id));
+            var movie = await _connection.Find<Movie>((Constants.Id, id));
             await _connection.Delete(movie);
             return RedirectToAction(nameof(MoviesPage));
         }
@@ -124,7 +125,7 @@ namespace WebApplication.Controllers
         [Route("admin/director/remove", Name = "RemoveDirector")]
         public async Task<IActionResult> RemoveDirector(string id)
         {
-            var director = await _connection.Find<Director>(("Id", id));
+            var director = await _connection.Find<Director>((Constants.Id, id));
             await _connection.Delete(director);
             return RedirectToAction(nameof(DirectorsPage));
         }
@@ -146,7 +147,7 @@ namespace WebApplication.Controllers
         [Route("admin/actor/remove", Name = "RemoveActor")]
         public async Task<IActionResult> RemoveActor(string id)
         {
-            var actor = await _connection.Find<Actor>(("Id", id));
+            var actor = await _connection.Find<Actor>((Constants.Id, id));
             await _connection.Delete(actor);
             return RedirectToAction(nameof(ActorsPage));
         }
@@ -154,7 +155,7 @@ namespace WebApplication.Controllers
         [Route("admin/user/remove", Name = "RemoveUser")]
         public async Task<IActionResult> RemoveUser(string id)
         {
-            var user = await _connection.Find<User>(("Id", id));
+            var user = await _connection.Find<User>((Constants.Id, id));
             await _connection.Delete(user);
             return RedirectToAction(nameof(UsersPage));
         }

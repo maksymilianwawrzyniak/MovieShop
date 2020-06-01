@@ -31,10 +31,9 @@ namespace WebApplication.Controllers
         {
             var movies = genre.IsNullOrEmpty()
                 ? await _connection.GetAllOfLabel<Movie>()
-                : await _connection.FindAll<Movie>(("Genre", genre));
+                : await _connection.FindAll<Movie>((Constants.Genre, genre));
             var genres = new HashSet<string>((await _connection.GetAllOfLabel<Movie>()).Select(x => x.Genre));
-            var indexPageViewModel = new IndexPageViewModel
-                {Movies = movies, Genres = genres, UserViewModel = new UserViewModel()};
+            var indexPageViewModel = new IndexPageViewModel(movies, genres);
             return View(indexPageViewModel);
         }
 
@@ -61,7 +60,7 @@ namespace WebApplication.Controllers
         public async Task<IActionResult> ShowMovie(string id)
         {
             var user = SessionUtil.GetUser(_httpContextAccessor);
-            var movie = await _connection.Find<Movie>(("Id", id));
+            var movie = await _connection.Find<Movie>((Constants.Id, id));
             return RedirectToAction(nameof(Index));
         }
     }

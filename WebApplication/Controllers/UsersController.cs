@@ -5,6 +5,7 @@ using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using WebApplication.Database;
 using WebApplication.Models;
+using WebApplication.Utils;
 using WebApplication.ViewModels;
 
 namespace WebApplication.Controllers
@@ -29,7 +30,7 @@ namespace WebApplication.Controllers
         public async Task<IActionResult> RegisterUser(User user)
         {
             user.UserType = "User";
-            var dbUser = await _connection.Find<User>(("Email", user.Email));
+            var dbUser = await _connection.Find<User>((Constants.Email, user.Email));
             if (dbUser != null)
                 return Redirect("/");
 
@@ -40,7 +41,7 @@ namespace WebApplication.Controllers
         [Route("login", Name = "LoginUser")]
         public async Task<IActionResult> LoginUser(UserViewModel userViewModel)
         {
-            var user = await _connection.Find<User>(("Email", userViewModel.Email));
+            var user = await _connection.Find<User>((Constants.Email, userViewModel.Email));
             if (user == default)
                 return Redirect("/");
 
