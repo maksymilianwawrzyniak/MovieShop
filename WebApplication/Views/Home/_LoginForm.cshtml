@@ -1,0 +1,24 @@
+﻿@model WebApplication.ViewModels.UserViewModel
+
+<div class="container-fluid">
+    <div class="row">
+        <form method="post" asp-route="LoginUser">
+            <div class="row">
+                <label asp-for="Email"></label>
+                <input asp-for="Email" type="email"/>
+            </div>
+            <div class="row">
+                <label asp-for="Password"></label>
+                <input asp-for="Password" type="password"/>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <button type="submit">Login</button>
+                </div>
+                <div class="col-6">
+                    <a asp-controller="Home" asp-action="RegistrationPage">Register</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

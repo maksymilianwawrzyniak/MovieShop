@@ -15,7 +15,9 @@
                     <div>
                         <div class="col-8">@user.Username (@user.Email)</div>
                         <div class="col-4">
-                            <button class="btn btn-primary">Delete</button>
+                            <a asp-controller="Admin" asp-action="RemoveUser" asp-route-id="@user.Id">
+                                <div class="col-6 mb-0">Delete</div>
+                            </a>
                         </div>
                     </div>
                 }

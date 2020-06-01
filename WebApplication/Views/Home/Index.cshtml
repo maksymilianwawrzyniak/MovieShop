@@ -1,10 +1,34 @@
-﻿@model WebApplication.ViewModels.AdminMoviesPageModel
+﻿@using Microsoft.AspNetCore.Http
+@using WebApplication.Utils
+@inject IHttpContextAccessor HttpContextAccessor
+@model WebApplication.ViewModels.IndexPageViewModel
 
 @{
     ViewData["Title"] = "Home Page";
+    var user = SessionUtil.GetUser(HttpContextAccessor);
+    var isLoggedIn = user != null;
+    var isAdmin = user?.UserType == "ADMIN";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container-fluid">
+    <div class="row">
+        @if (isLoggedIn)
+        {
+            <div class="col-2">
+                @foreach (var genre in Model.Genres)
+                {
+                    <div class="row">
+                        <a asp-controller="Home" asp-action="Index" asp-route-genre="@genre">@genre</a>
+                    </div>
+                }
+            </div>
+            <div class="col-10">
+                @await Html.PartialAsync("_MoviesList", Model.Movies)
+            </div>
+        }
+        else
+        {
+            @await Html.PartialAsync("_LoginForm", Model.UserViewModel)
+        }
+    </div>
 </div>

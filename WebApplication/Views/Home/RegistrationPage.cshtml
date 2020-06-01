@@ -1,0 +1,27 @@
+﻿@model User
+
+@{
+    ViewData["Title"] = "Registration";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-auto">
+            <form method="post" asp-route="RegisterUser">
+                <div>
+                    <label asp-for="Email"></label>
+                    <input asp-for="Email" type="email"/>
+                </div>
+                <div>
+                    <label asp-for="Username"></label>
+                    <input asp-for="Username"/>
+                </div>
+                <div>
+                    <label asp-for="Password"></label>
+                    <input asp-for="Password" type="password"/>
+                </div>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+</div>

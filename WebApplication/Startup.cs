@@ -1,5 +1,7 @@
+using System;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -23,9 +25,11 @@ namespace WebApplication
         {
             var loggerFactory = LoggerFactory.Create(x => x.AddConsole());
             var logger = loggerFactory.CreateLogger("Movie Shop");
+            services.AddSession();
             services.AddSingleton(logger);
             services.AddControllersWithViews();
             services.AddRazorPages();
+            services.AddTransient<IHttpContextAccessor, HttpContextAccessor>();
             services.AddSingleton<AppSettingsModel>();
             services.AddSingleton<Connection>();
         }
@@ -44,14 +48,15 @@ namespace WebApplication
                 app.UseHsts();
             }
 
+            app.UseSession(new SessionOptions
+            {
+                IdleTimeout = TimeSpan.FromMinutes(30)
+            });
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseRouting();
-
-            // app.UseAuthentication()/
-            // app.UseAuthorization();
-
+            
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");

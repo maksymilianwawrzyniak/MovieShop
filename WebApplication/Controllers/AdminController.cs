@@ -52,6 +52,7 @@ namespace WebApplication.Controllers
         {
             return View();
         }
+        
         public async Task<IActionResult> EditMoviePage(string id)
         {
             var movie = await _connection.Find<Movie>(("Id", id));
@@ -62,6 +63,7 @@ namespace WebApplication.Controllers
         {
             return View();
         }
+        
         public async Task<IActionResult> EditDirectorPage(string id)
         {
             var director = await _connection.Find<Director>(("Id", id));
@@ -72,6 +74,7 @@ namespace WebApplication.Controllers
         {
             return View();
         }
+        
         public async Task<IActionResult> EditActorPage(string id)
         {
             var actor = await _connection.Find<Actor>(("Id", id));

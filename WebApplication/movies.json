@@ -1,0 +1,296 @@
+[
+	{
+	    "Title": "Avengers: Endgame",
+	    "Published": "2019",
+	    "Genre": "Action",
+	    "Price": "29.99",
+	    "ThumbnailPath": "/covers/1.jpg"
+	},
+	{
+	    "Title": "Deadpool",
+	    "Published": "2016",
+	    "Genre": "Action",
+	    "Price": "24.99",
+	    "ThumbnailPath": "/covers/2.jpg"
+	},
+	{
+	    "Title": "The Dark Knight",
+	    "Published": "2008",
+	    "Genre": "Action",
+	    "Price": "19.99",
+	    "ThumbnailPath": "/covers/3.jpg"
+	},
+	{
+	    "Title": "Indiana Jones and the last Crusade",
+	    "Published": "1989",
+	    "Genre": "Adventure",
+	    "Price": "14.99",
+	    "ThumbnailPath": "/covers/4.jpg"
+	},
+	{
+	    "Title": "Jurassic Park",
+	    "Published": "1993",
+	    "Genre": "Adventure",
+	    "Price": "9.99",
+	    "ThumbnailPath": "/covers/5.jpg"
+	},
+	{
+	    "Title": "Pirates of The Caribbean: Dead Man's Chest",
+	    "Published": "2006",
+	    "Genre": "Adventure",
+	    "Price": "14.99",
+	    "ThumbnailPath": "/covers/6.jpg"
+	},
+	{
+	    "Title": "Inside out",
+	    "Published": "2015",
+	    "Genre": "Animation",
+	    "Price": "14.99",
+	    "ThumbnailPath": "/covers/7.jpg"
+	},
+	{
+	    "Title": "Shrek",
+	    "Published": "2001",
+	    "Genre": "Animation",
+	    "Price": "49.99",
+	    "ThumbnailPath": "/covers/8.jpg"
+	},
+	{
+	    "Title": "The Iron Giant",
+	    "Published": "1999",
+	    "Genre": "Animation",
+	    "Price": "9.99",
+	    "ThumbnailPath": "/covers9.jpg"
+	},
+	{
+	    "Title": "Forrest Gump",
+	    "Published": "1994",
+	    "Genre": "Comedy",
+	    "Price": "9.99",
+	    "ThumbnailPath": "/covers/10.jpg"
+	},
+	{
+	    "Title": "Intouchables",
+	    "Published": "2011",
+	    "Genre": "Comedy",
+	    "Price": "14.99",
+	    "ThumbnailPath": "/covers/11.jpg"
+	},
+	{
+	    "Title": "La vita e bella",
+	    "Published": "1997",
+	    "Genre": "Comedy",
+	    "Price": "9.99",
+	    "ThumbnailPath": "/covers/12.jpg"
+	},
+	{
+	    "Title": "Inside Job",
+	    "Published": "2010",
+	    "Genre": "Documentary",
+	    "Price": "9.99",
+	    "ThumbnailPath": "/covers/13.jpg"
+	},
+	{
+	    "Title": "Cocaine Cowboys",
+	    "Published": "2006",
+	    "Genre": "Documentary",
+	    "Price": "9.99",
+	    "ThumbnailPath": "/covers/14.jpg"
+	},
+	{
+	    "Title": "Woodstock",
+	    "Published": "1970",
+	    "Genre": "Documentary",
+	    "Price": "9.99",
+	    "ThumbnailPath": "/covers/15.jpg"
+	},
+	{
+	    "Title": "The Godfatger",
+	    "Published": "1972",
+	    "Genre": "Drama",
+	    "Price": "19.99",
+	    "ThumbnailPath": "/covers/16.jpg"
+	},
+	{
+	    "Title": "The Green Mile",
+	    "Published": "1999",
+	    "Genre": "Drama",
+	    "Price": "14.99",
+	    "ThumbnailPath": "/covers/17.jpg"
+	},
+	{
+	    "Title": "The Shawshank Redemption",
+	    "Published": "1994",
+	    "Genre": "Drama",
+	    "Price": "14.99",
+	    "ThumbnailPath": "/covers/18.jpg"
+	},
+	{
+	    "Title": "Mary Poppins",
+	    "Published": "1964",
+	    "Genre": "Family",
+	    "Price": "9.99",
+	    "ThumbnailPath": "/covers/19.jpg"
+	},
+	{
+	    "Title": "My Girl",
+	    "Published": "1991",
+	    "Genre": "Family",
+	    "Price": "9.99",
+	    "ThumbnailPath": "/covers/20.jpg"
+	},
+	{
+	    "Title": "Secondhand Lions",
+	    "Published": "2003",
+	    "Genre": "Family",
+	    "Price": "9.99",
+	    "ThumbnailPath": "/covers/21.jpg"
+	},
+	{
+	    "Title": "Harry Potter and the Chamber of Secrets",
+	    "Published": "2002",
+	    "Genre": "Fantasy",
+	    "Price": "14.99",
+	    "ThumbnailPath": "/covers/22.jpg"
+	},
+	{
+	    "Title": "The Hobbit: An Unexpected Journey",
+	    "Published": "2012",
+	    "Genre": "Fantasy",
+	    "Price": "19.99",
+	    "ThumbnailPath": "/covers/23.jpg"
+	},
+	{
+	    "Title": "The Lord of The Rings: Two Towers",
+	    "Published": "2002",
+	    "Genre": "Fantasy",
+	    "Price": "19.99",
+	    "ThumbnailPath": "/covers/24.jpg"
+	},
+	{
+	    "Title": "JFK",
+	    "Published": "1991",
+	    "Genre": "History",
+	    "Price": "9.99",
+	    "ThumbnailPath": "/covers/25.jpg"
+	},
+	{
+	    "Title": "The Corporation",
+	    "Published": "2003",
+	    "Genre": "History",
+	    "Price": "9.99",
+	    "ThumbnailPath": "/covers/26.jpg"
+	},
+	{
+	    "Title": "The White Countess",
+	    "Published": "2005",
+	    "Genre": "History",
+	    "Price": "9.99",
+	    "ThumbnailPath": "/covers/27.jpg"
+	},
+	{
+	    "Title": "Hereditary",
+	    "Published": "2018",
+	    "Genre": "Horror",
+	    "Price": "19.99",
+	    "ThumbnailPath": "/covers/28.jpg"
+	},
+	{
+	    "Title": "The Conjuring",
+	    "Published": "2013",
+	    "Genre": "Horror",
+	    "Price": "14.99",
+	    "ThumbnailPath": "/covers/29.jpg"
+	},
+	{
+	    "Title": "The Lighthouse",
+	    "Published": "2019",
+	    "Genre": "Horror",
+	    "Price": "19.99",
+	    "ThumbnailPath": "/covers/30.jpg"
+	},
+	{
+	    "Title": "My name is Khan",
+	    "Published": "2010",
+	    "Genre": "Romance",
+	    "Price": "4.99",
+	    "ThumbnailPath": "/covers/31.jpg"
+	},
+	{
+	    "Title": "The House of the Spirits",
+	    "Published": "1993",
+	    "Genre": "Romance",
+	    "Price": "4.99",
+	    "ThumbnailPath": "/covers/32.jpg"
+	},
+	{
+	    "Title": "Three Idiots",
+	    "Published": "2009",
+	    "Genre": "Romance",
+	    "Price": "4.99",
+	    "ThumbnailPath": "/covers/33.jpg"
+	},
+	{
+	    "Title": "Back to the Future",
+	    "Published": "1985",
+	    "Genre": "Sci-fi",
+	    "Price": "14.99",
+	    "ThumbnailPath": "/covers/34.jpg"
+	},
+	{
+	    "Title": "Inception",
+	    "Published": "2010",
+	    "Genre": "Sci-fi",
+	    "Price": "19.99",
+	    "ThumbnailPath": "/covers/35.jpg"
+	},
+	{
+	    "Title": "Star Wars: Episode VI - Return of the Jedi",
+	    "Published": "1983",
+	    "Genre": "Sci-fi",
+	    "Price": "14.99",
+	    "ThumbnailPath": "/covers/36.jpg"
+	},
+	{
+	    "Title": "Law Abiding Citizen",
+	    "Published": "2009",
+	    "Genre": "Thriller",
+	    "Price": "9.99",
+	    "ThumbnailPath": "/covers/37.jpg"
+	},
+	{
+	    "Title": "Shutter Island",
+	    "Published": "2010",
+	    "Genre": "Thriller",
+	    "Price": "9.99",
+	    "ThumbnailPath": "/covers/38.jpg"
+	},
+	{
+	    "Title": "The Silence of the Lambs",
+	    "Published": "1991",
+	    "Genre": "Thriller",
+	    "Price": "9.99",
+	    "ThumbnailPath": "/covers/39.jpg"
+	},
+	{
+	    "Title": "Schindler's List",
+	    "Published": "1993",
+	    "Genre": "War",
+	    "Price": "9.99",
+	    "ThumbnailPath": "/covers/40.jpg"
+	},
+	{
+	    "Title": "The Boy in the Striped Pyjamas",
+	    "Published": "2008",
+	    "Genre": "War",
+	    "Price": "9.99",
+	    "ThumbnailPath": "/covers/41.jpg"
+	},
+	{
+	    "Title": "The Pianist",
+	    "Published": "2002",
+	    "Genre": "War",
+	    "Price": "14.99",
+	    "ThumbnailPath": "/covers/42.jpg"
+	}
+]
