@@ -1,22 +1,29 @@
-﻿@model IEnumerable<Movie>
+﻿@model IEnumerable<WebApplication.ViewModels.MovieViewModel>
 
 
 <div class="container-fluid">
     <div class="row">
         @foreach (var movie in Model)
-            {
-                <div class="col-sm-6">
+        {
+            <div class="col-sm-6">
+                <div class="container">
                     <a asp-controller="Movie" asp-action="BuyMovie" asp-route-id="@movie.Id">
-                        <div class="container">
-                            <div>
-                                <img src="@movie.ThumbnailPath" class="img-thumbnail mx-auto d-block" alt="@movie.Title"/>
-                            </div>
-                            <div class="text-center">
-                                @movie.Title
-                            </div>
+
+                        <div>
+                            <img src="@movie.ThumbnailPath" class="img-thumbnail mx-auto d-block" alt="@movie.Title"/>
+                        </div>
+                        <div class="text-center">
+                            @movie.Title
                         </div>
                     </a>
+                    <div class="text-center">
+                        @if (movie.BoughtCount > 0)
+                        {
+                            <text>Users that have bought this movie @movie.BoughtCount</text>
+                        }
+                    </div>
                 </div>
-            }
+            </div>
+        }
     </div>
 </div>

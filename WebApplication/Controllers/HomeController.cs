@@ -33,7 +33,14 @@ namespace WebApplication.Controllers
                 ? await _connection.GetAllOfLabel<Movie>()
                 : await _connection.FindAll<Movie>((Constants.Genre, genre));
             var genres = new HashSet<string>((await _connection.GetAllOfLabel<Movie>()).Select(x => x.Genre));
-            var indexPageViewModel = new IndexPageViewModel(movies, genres);
+            var movieViewModels = new List<MovieViewModel>();
+            foreach (var movie in movies)
+            {
+                var boughtCount = await _connection.CountRelationships<Movie, User>(movie, Constants.BoughtLabel);
+                movieViewModels.Add(new MovieViewModel(movie, boughtCount));
+            }
+
+            var indexPageViewModel = new IndexPageViewModel(movieViewModels, genres);
             return View(indexPageViewModel);
         }
 

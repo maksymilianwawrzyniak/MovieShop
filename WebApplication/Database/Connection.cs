@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Neo4j.Driver;
@@ -125,17 +126,9 @@ namespace WebApplication.Database
 
             var queryContent = query.ToString();
             Console.WriteLine(queryContent);
-            try
-            {
-                var cursor = await session.RunAsync(queryContent);
-                var result = (await cursor.SingleAsync()).Map<T>();
-                return result;
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message + e.StackTrace);
-                return null;
-            }
+            var cursor = await session.RunAsync(queryContent);
+            var result = (await cursor.ToListAsync()).Map<T>().FirstOrDefault();
+            return result;
         }
 
         /// <summary>
@@ -190,7 +183,7 @@ namespace WebApplication.Database
         /// <summary>
         ///     Create relationship from model T to model TV with passed label.
         /// </summary>
-        public async Task<string> CreateDirectedRelationship<T, TV>(T fromModel, TV toModel, string relationShipLabel)
+        public async Task<string> CreateDirectedRelationship<T, TV>(T fromModel, TV toModel, string relationshipLabel)
             where T : BaseModel where TV : BaseModel
         {
             var fromModelName = fromModel.GetType().Name;
@@ -204,9 +197,9 @@ namespace WebApplication.Database
             query.Append($"(y:{toModelName}");
             query.AppendLine($" {{{nameof(toModel.Id)}: '{toModel.Id}'}})");
 
-            query.AppendLine(relationShipLabel.IsNullOrEmpty()
+            query.AppendLine(relationshipLabel.IsNullOrEmpty()
                 ? "CREATE (x)-[r]->(y)"
-                : $"CREATE (x)-[r:{relationShipLabel}]->(y)");
+                : $"CREATE (x)-[r:{relationshipLabel}]->(y)");
             query.AppendLine("RETURN type(r)");
 
             var cursor = await session.RunAsync(query.ToString());
@@ -218,24 +211,46 @@ namespace WebApplication.Database
         /// </summary>
         /// <param name="fromModel">Model from which relationships starts.</param>
         /// <param name="toModel">Model to which relationship directs to.</param>
-        /// <param name="relationShipLabel">Label of relationship to find.</param>
+        /// <param name="relationshipLabel">Label of relationship to find.</param>
         public async Task<IEnumerable<string>> GetRelationshipsBetween<T, TV>(T fromModel, TV toModel,
-            string relationShipLabel = null)
+            string relationshipLabel = null) where T : BaseModel where TV : BaseModel
         {
             var fromModelName = fromModel.GetType().Name;
             var toModelName = toModel.GetType().Name;
 
             using var session = DatabaseSession.StartSession(_driver, _appSettings.DatabaseName);
 
-            var query = new StringBuilder($"MATCH (x:{fromModelName})");
-            query.AppendLine(relationShipLabel.IsNullOrEmpty()
+            var query = new StringBuilder($"MATCH (x:{fromModelName}");
+            query.Append($" {{{nameof(fromModel.Id)}: '{fromModel.Id}'}})");
+            query.Append(relationshipLabel.IsNullOrEmpty()
                 ? "-[r]->"
-                : $"-[r:{relationShipLabel}]->");
-            query.Append($"(y:{toModelName})");
+                : $"-[r:{relationshipLabel}]->");
+            query.Append($"(y:{toModelName}");
+            query.Append($" {{{nameof(toModel.Id)}: '{toModel.Id}'}})");
             query.AppendLine("RETURN type(r)");
 
             var cursor = await session.RunAsync(query.ToString());
             return (await cursor.ToListAsync()).Map<string>();
+        }
+
+        public async Task<int> CountRelationships<T, TV>(T toModel, string relationshipLabel)
+            where T : BaseModel where TV : BaseModel
+        {
+            var fromModelName = toModel.GetType().Name;
+            var toModelName = typeof(TV).Name;
+
+            using var session = DatabaseSession.StartSession(_driver, _appSettings.DatabaseName);
+
+            var query = new StringBuilder($"MATCH (x:{fromModelName}");
+            query.Append($" {{{nameof(toModel.Id)}: '{toModel.Id}'}})");
+            query.Append(relationshipLabel.IsNullOrEmpty()
+                ? "<-[r]-"
+                : $"<-[r:{relationshipLabel}]-");
+            query.AppendLine($"(y:{toModelName})");
+            query.AppendLine("RETURN COUNT(r)");
+
+            var cursor = await session.RunAsync(query.ToString());
+            return (await cursor.SingleAsync()).Map<int>();
         }
 
         public void Dispose()

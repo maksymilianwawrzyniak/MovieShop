@@ -1,296 +1,338 @@
 [
 	{
-		"Title": "Avengers: Endgame",
-		"Published": "2019",
-		"Genre": "Action",
-		"Price": "29.99",
-		"ThumbnailPath": "/covers/1.jpg"
+	    "Title": "Avengers: Endgame",
+	    "Published": "2019",
+	    "Genre": "Action",
+	    "Price": "29.99",
+	    "ThumbnailPath": "/covers/1.jpg",
+			"Description": "After the devastating events of Avengers: Infinity War, the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe. "
 	},
 	{
-		"Title": "Deadpool",
-		"Published": "2016",
-		"Genre": "Action",
-		"Price": "24.99",
-		"ThumbnailPath": "/covers/2.jpg"
+	    "Title": "Deadpool",
+	    "Published": "2016",
+	    "Genre": "Action",
+	    "Price": "24.99",
+	    "ThumbnailPath": "/covers/2.jpg",
+			"Description": "A wisecracking mercenary gets experimented on and becomes immortal but ugly, and sets out to track down the man who ruined his looks."
 	},
 	{
-		"Title": "The Dark Knight",
-		"Published": "2008",
-		"Genre": "Action",
-		"Price": "19.99",
-		"ThumbnailPath": "/covers/3.jpg"
+	    "Title": "The Dark Knight",
+	    "Published": "2008",
+	    "Genre": "Action",
+	    "Price": "19.99",
+	    "ThumbnailPath": "/covers/3.jpg",
+			"Description": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice."
 	},
 	{
-		"Title": "Indiana Jones and the last Crusade",
-		"Published": "1989",
-		"Genre": "Adventure",
-		"Price": "14.99",
-		"ThumbnailPath": "/covers/4.jpg"
+	    "Title": "Indiana Jones and the last Crusade",
+	    "Published": "1989",
+	    "Genre": "Adventure",
+	    "Price": "14.99",
+	    "ThumbnailPath": "/covers/4.jpg",
+			"Description": "In 1938, after his father Professor Henry Jones, Sr. goes missing while pursuing the Holy Grail, Professor Henry Indiana Jones, Jr. finds himself up against Adolf Hitler's Nazis again to stop them from obtaining its powers."
 	},
 	{
-		"Title": "Jurassic Park",
-		"Published": "1993",
-		"Genre": "Adventure",
-		"Price": "9.99",
-		"ThumbnailPath": "/covers/5.jpg"
+	    "Title": "Jurassic Park",
+	    "Published": "1993",
+	    "Genre": "Adventure",
+	    "Price": "9.99",
+	    "ThumbnailPath": "/covers/5.jpg",
+			"Description": "A pragmatic paleontologist visiting an almost complete theme park is tasked with protecting a couple of kids after a power failure causes the park's cloned dinosaurs to run loose."
 	},
 	{
-		"Title": "Pirates of The Caribbean: Dead Mans Chest",
-		"Published": "2006",
-		"Genre": "Adventure",
-		"Price": "14.99",
-		"ThumbnailPath": "/covers/6.jpg"
+	    "Title": "Pirates of The Caribbean: Dead Mans Chest",
+	    "Published": "2006",
+	    "Genre": "Adventure",
+	    "Price": "14.99",
+	    "ThumbnailPath": "/covers/6.jpg",
+			"Description": "Jack Sparrow races to recover the heart of Davy Jones to avoid enslaving his soul to Jones' service, as other friends and foes seek the heart for their own agenda as well."
 	},
 	{
-		"Title": "Inside out",
-		"Published": "2015",
-		"Genre": "Animation",
-		"Price": "14.99",
-		"ThumbnailPath": "/covers/7.jpg"
+	    "Title": "Inside out",
+	    "Published": "2015",
+	    "Genre": "Animation",
+	    "Price": "14.99",
+	    "ThumbnailPath": "/covers/7.jpg",
+			"Description": "After young Riley is uprooted from her Midwest life and moved to San Francisco, her emotions - Joy, Fear, Anger, Disgust and Sadness - conflict on how best to navigate a new city, house, and school."
 	},
 	{
-		"Title": "Shrek",
-		"Published": "2001",
-		"Genre": "Animation",
-		"Price": "49.99",
-		"ThumbnailPath": "/covers/8.jpg"
+	    "Title": "Shrek",
+	    "Published": "2001",
+	    "Genre": "Animation",
+	    "Price": "49.99",
+	    "ThumbnailPath": "/covers/8.jpg",
+			"Description": "A mean lord exiles fairytale creatures to the swamp of a grumpy ogre, who must go on a quest and rescue a princess for the lord in order to get his land back."
 	},
 	{
-		"Title": "The Iron Giant",
-		"Published": "1999",
-		"Genre": "Animation",
-		"Price": "9.99",
-		"ThumbnailPath": "/covers9.jpg"
+	    "Title": "The Iron Giant",
+	    "Published": "1999",
+	    "Genre": "Animation",
+	    "Price": "9.99",
+	    "ThumbnailPath": "/covers/9.jpg",
+			"Description": "A young boy befriends a giant robot from outer space that a paranoid government agent wants to destroy."
 	},
 	{
-		"Title": "Forrest Gump",
-		"Published": "1994",
-		"Genre": "Comedy",
-		"Price": "9.99",
-		"ThumbnailPath": "/covers/10.jpg"
+	    "Title": "Forrest Gump",
+	    "Published": "1994",
+	    "Genre": "Comedy",
+	    "Price": "9.99",
+	    "ThumbnailPath": "/covers/10.jpg",
+			"Description": "The presidencies of Kennedy and Johnson, the events of Vietnam, Watergate and other historical events unfold through the perspective of an Alabama man with an IQ of 75, whose only desire is to be reunited with his childhood sweetheart."
 	},
 	{
-		"Title": "Intouchables",
-		"Published": "2011",
-		"Genre": "Comedy",
-		"Price": "14.99",
-		"ThumbnailPath": "/covers/11.jpg"
+	    "Title": "Intouchables",
+	    "Published": "2011",
+	    "Genre": "Comedy",
+	    "Price": "14.99",
+	    "ThumbnailPath": "/covers/11.jpg",
+			"Description": "After he becomes a quadriplegic from a paragliding accident, an aristocrat hires a young man from the projects to be his caregiver."
 	},
 	{
-		"Title": "La vita e bella",
-		"Published": "1997",
-		"Genre": "Comedy",
-		"Price": "9.99",
-		"ThumbnailPath": "/covers/12.jpg"
+	    "Title": "La vita e bella",
+	    "Published": "1997",
+	    "Genre": "Comedy",
+	    "Price": "9.99",
+	    "ThumbnailPath": "/covers/12.jpg",
+			"Description": "When an open-minded Jewish librarian and his son become victims of the Holocaust, he uses a perfect mixture of will, humor, and imagination to protect his son from the dangers around their camp."
 	},
 	{
-		"Title": "Inside Job",
-		"Published": "2010",
-		"Genre": "Documentary",
-		"Price": "9.99",
-		"ThumbnailPath": "/covers/13.jpg"
+	    "Title": "Inside Job",
+	    "Published": "2010",
+	    "Genre": "Documentary",
+	    "Price": "9.99",
+	    "ThumbnailPath": "/covers/13.jpg",
+			"Description": "Takes a closer look at what brought about the 2008 financial meltdown."
 	},
 	{
-		"Title": "Cocaine Cowboys",
-		"Published": "2006",
-		"Genre": "Documentary",
-		"Price": "9.99",
-		"ThumbnailPath": "/covers/14.jpg"
+	    "Title": "Cocaine Cowboys",
+	    "Published": "2006",
+	    "Genre": "Documentary",
+	    "Price": "9.99",
+	    "ThumbnailPath": "/covers/14.jpg",
+			"Description": "In the 1980s, ruthless Colombian cocaine barons invaded Miami with a brand of violence unseen in this country since Prohibition-era Chicago - and it put the city on the map."
 	},
 	{
-		"Title": "Woodstock",
-		"Published": "1970",
-		"Genre": "Documentary",
-		"Price": "9.99",
-		"ThumbnailPath": "/covers/15.jpg"
+	    "Title": "Woodstock",
+	    "Published": "1970",
+	    "Genre": "Documentary",
+	    "Price": "9.99",
+	    "ThumbnailPath": "/covers/15.jpg",
+			"Description": "The film chronicle of the legendary 1969 music festival."
 	},
 	{
-		"Title": "The Godfather",
-		"Published": "1972",
-		"Genre": "Drama",
-		"Price": "19.99",
-		"ThumbnailPath": "/covers/16.jpg"
+	    "Title": "The Godfather",
+	    "Published": "1972",
+	    "Genre": "Drama",
+	    "Price": "19.99",
+	    "ThumbnailPath": "/covers/16.jpg",
+			"Description": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son."
 	},
 	{
-		"Title": "The Green Mile",
-		"Published": "1999",
-		"Genre": "Drama",
-		"Price": "14.99",
-		"ThumbnailPath": "/covers/17.jpg"
+	    "Title": "The Green Mile",
+	    "Published": "1999",
+	    "Genre": "Drama",
+	    "Price": "14.99",
+	    "ThumbnailPath": "/covers/17.jpg",
+			"Description": "The lives of guards on Death Row are affected by one of their charges: a black man accused of child murder and rape, yet who has a mysterious gift."
 	},
 	{
-		"Title": "The Shawshank Redemption",
-		"Published": "1994",
-		"Genre": "Drama",
-		"Price": "14.99",
-		"ThumbnailPath": "/covers/18.jpg"
+	    "Title": "The Shawshank Redemption",
+	    "Published": "1994",
+	    "Genre": "Drama",
+	    "Price": "14.99",
+	    "ThumbnailPath": "/covers/18.jpg",
+			"Description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency."
 	},
 	{
-		"Title": "Mary Poppins",
-		"Published": "1964",
-		"Genre": "Family",
-		"Price": "9.99",
-		"ThumbnailPath": "/covers/19.jpg"
+	    "Title": "Mary Poppins",
+	    "Published": "1964",
+	    "Genre": "Family",
+	    "Price": "9.99",
+	    "ThumbnailPath": "/covers/19.jpg",
+			"Description": "In turn of the century London, a magical nanny employs music and adventure to help two neglected children become closer to their father."
 	},
 	{
-		"Title": "My Girl",
-		"Published": "1991",
-		"Genre": "Family",
-		"Price": "9.99",
-		"ThumbnailPath": "/covers/20.jpg"
+	    "Title": "My Girl",
+	    "Published": "1991",
+	    "Genre": "Family",
+	    "Price": "9.99",
+	    "ThumbnailPath": "/covers/20.jpg",
+			"Description": "A young girl, on the threshold of her teen years, finds her life turning upside down, when she is accompanied by an unlikely friend."
 	},
 	{
-		"Title": "Secondhand Lions",
-		"Published": "2003",
-		"Genre": "Family",
-		"Price": "9.99",
-		"ThumbnailPath": "/covers/21.jpg"
+	    "Title": "Secondhand Lions",
+	    "Published": "2003",
+	    "Genre": "Family",
+	    "Price": "9.99",
+	    "ThumbnailPath": "/covers/21.jpg",
+			"Description": "A coming-of-age story about a shy, young boy sent by his irresponsible mother to spend the summer with his wealthy, eccentric uncles in Texas."
 	},
 	{
-		"Title": "Harry Potter and the Chamber of Secrets",
-		"Published": "2002",
-		"Genre": "Fantasy",
-		"Price": "14.99",
-		"ThumbnailPath": "/covers/22.jpg"
+	    "Title": "Harry Potter and the Chamber of Secrets",
+	    "Published": "2002",
+	    "Genre": "Fantasy",
+	    "Price": "14.99",
+	    "ThumbnailPath": "/covers/22.jpg",
+			"Description": "An ancient prophecy seems to be coming true when a mysterious presence begins stalking the corridors of a school of magic and leaving its victims paralyzed."
 	},
 	{
-		"Title": "The Hobbit: An Unexpected Journey",
-		"Published": "2012",
-		"Genre": "Fantasy",
-		"Price": "19.99",
-		"ThumbnailPath": "/covers/23.jpg"
+	    "Title": "The Hobbit: An Unexpected Journey",
+	    "Published": "2012",
+	    "Genre": "Fantasy",
+	    "Price": "19.99",
+	    "ThumbnailPath": "/covers/23.jpg",
+			"Description": "A reluctant Hobbit, Bilbo Baggins, sets out to the Lonely Mountain with a spirited group of dwarves to reclaim their mountain home, and the gold within it from the dragon Smaug."
 	},
 	{
-		"Title": "The Lord of The Rings: Two Towers",
-		"Published": "2002",
-		"Genre": "Fantasy",
-		"Price": "19.99",
-		"ThumbnailPath": "/covers/24.jpg"
+	    "Title": "The Lord of The Rings: Two Towers",
+	    "Published": "2002",
+	    "Genre": "Fantasy",
+	    "Price": "19.99",
+	    "ThumbnailPath": "/covers/24.jpg",
+			"Description": "While Frodo and Sam edge closer to Mordor with the help of the shifty Gollum, the divided fellowship makes a stand against Sauron's new ally, Saruman, and his hordes of Isengard."
 	},
 	{
-		"Title": "JFK",
-		"Published": "1991",
-		"Genre": "History",
-		"Price": "9.99",
-		"ThumbnailPath": "/covers/25.jpg"
+	    "Title": "JFK",
+	    "Published": "1991",
+	    "Genre": "History",
+	    "Price": "9.99",
+	    "ThumbnailPath": "/covers/25.jpg",
+			"Description": "New Orleans District Attorney Jim Garrison discovers there's more to the Kennedy assassination than the official story."
 	},
 	{
-		"Title": "The Corporation",
-		"Published": "2003",
-		"Genre": "History",
-		"Price": "9.99",
-		"ThumbnailPath": "/covers/26.jpg"
+	    "Title": "The Corporation",
+	    "Published": "2003",
+	    "Genre": "History",
+	    "Price": "9.99",
+	    "ThumbnailPath": "/covers/26.jpg",
+			"Description": "Documentary that looks at the concept of the corporation throughout recent history up to its present-day dominance."
 	},
 	{
-		"Title": "The White Countess",
-		"Published": "2005",
-		"Genre": "History",
-		"Price": "9.99",
-		"ThumbnailPath": "/covers/27.jpg"
+	    "Title": "The White Countess",
+	    "Published": "2005",
+	    "Genre": "History",
+	    "Price": "9.99",
+	    "ThumbnailPath": "/covers/27.jpg",
+			"Description": "Set in 1930s Shanghai, where a blind American diplomat develops a curious relationship with a young Russian refugee who works odd and sometimes illicit jobs to support members of her dead husband's aristocratic family."
 	},
 	{
-		"Title": "Hereditary",
-		"Published": "2018",
-		"Genre": "Horror",
-		"Price": "19.99",
-		"ThumbnailPath": "/covers/28.jpg"
+	    "Title": "Hereditary",
+	    "Published": "2018",
+	    "Genre": "Horror",
+	    "Price": "19.99",
+	    "ThumbnailPath": "/covers/28.jpg",
+			"Description": "A grieving family is haunted by tragic and disturbing occurrences."
 	},
 	{
-		"Title": "The Conjuring",
-		"Published": "2013",
-		"Genre": "Horror",
-		"Price": "14.99",
-		"ThumbnailPath": "/covers/29.jpg"
+	    "Title": "The Conjuring",
+	    "Published": "2013",
+	    "Genre": "Horror",
+	    "Price": "14.99",
+	    "ThumbnailPath": "/covers/29.jpg",
+			"Description": "Paranormal investigators Ed and Lorraine Warren work to help a family terrorized by a dark presence in their farmhouse."
 	},
 	{
-		"Title": "The Lighthouse",
-		"Published": "2019",
-		"Genre": "Horror",
-		"Price": "19.99",
-		"ThumbnailPath": "/covers/30.jpg"
+	    "Title": "The Lighthouse",
+	    "Published": "2019",
+	    "Genre": "Horror",
+	    "Price": "19.99",
+	    "ThumbnailPath": "/covers/30.jpg",
+			"Description": "Two lighthouse keepers try to maintain their sanity whilst living on a remote and mysterious New England island in the 1890s."
 	},
 	{
-		"Title": "My name is Khan",
-		"Published": "2010",
-		"Genre": "Romance",
-		"Price": "4.99",
-		"ThumbnailPath": "/covers/31.jpg"
+	    "Title": "My name is Khan",
+	    "Published": "2010",
+	    "Genre": "Romance",
+	    "Price": "4.99",
+	    "ThumbnailPath": "/covers/31.jpg",
+			"Description": "An Indian Muslim man with Asperger's syndrome takes a challenge to speak to the President of the United States seriously and embarks on a cross-country journey."
 	},
 	{
-		"Title": "The House of the Spirits",
-		"Published": "1993",
-		"Genre": "Romance",
-		"Price": "4.99",
-		"ThumbnailPath": "/covers/32.jpg"
+	    "Title": "The House of the Spirits",
+	    "Published": "1993",
+	    "Genre": "Romance",
+	    "Price": "4.99",
+	    "ThumbnailPath": "/covers/32.jpg",
+			"Description": "A rancher, his clairvoyant wife and their family face turbulent years in South America in this adaptation of Isabel Allende's best-seller."
 	},
 	{
-		"Title": "Three Idiots",
-		"Published": "2009",
-		"Genre": "Romance",
-		"Price": "4.99",
-		"ThumbnailPath": "/covers/33.jpg"
+	    "Title": "Three Idiots",
+	    "Published": "2009",
+	    "Genre": "Romance",
+	    "Price": "4.99",
+	    "ThumbnailPath": "/covers/33.jpg",
+			"Description": "Two friends are searching for their long lost companion. They revisit their college days and recall the memories of their friend who inspired them to think differently, even as the rest of the world called them idiots."
 	},
 	{
-		"Title": "Back to the Future",
-		"Published": "1985",
-		"Genre": "Sci-fi",
-		"Price": "14.99",
-		"ThumbnailPath": "/covers/34.jpg"
+	    "Title": "Back to the Future",
+	    "Published": "1985",
+	    "Genre": "Sci-fi",
+	    "Price": "14.99",
+	    "ThumbnailPath": "/covers/34.jpg",
+			"Description": "Marty McFly, a 17-year-old high school student, is accidentally sent thirty years into the past in a time-traveling DeLorean invented by his close friend, the eccentric scientist Doc Brown."
 	},
 	{
-		"Title": "Inception",
-		"Published": "2010",
-		"Genre": "Sci-fi",
-		"Price": "19.99",
-		"ThumbnailPath": "/covers/35.jpg"
+	    "Title": "Inception",
+	    "Published": "2010",
+	    "Genre": "Sci-fi",
+	    "Price": "19.99",
+	    "ThumbnailPath": "/covers/35.jpg",
+			"Description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O."
 	},
 	{
-		"Title": "Star Wars: Episode VI - Return of the Jedi",
-		"Published": "1983",
-		"Genre": "Sci-fi",
-		"Price": "14.99",
-		"ThumbnailPath": "/covers/36.jpg"
+	    "Title": "Star Wars: Episode VI - Return of the Jedi",
+	    "Published": "1983",
+	    "Genre": "Sci-fi",
+	    "Price": "14.99",
+	    "ThumbnailPath": "/covers/36.jpg",
+			"Description": "After a daring mission to rescue Han Solo from Jabba the Hutt, the Rebels dispatch to Endor to destroy the second Death Star. Meanwhile, Luke struggles to help Darth Vader back from the dark side without falling into the Emperor's trap."
 	},
 	{
-		"Title": "Law Abiding Citizen",
-		"Published": "2009",
-		"Genre": "Thriller",
-		"Price": "9.99",
-		"ThumbnailPath": "/covers/37.jpg"
+	    "Title": "Law Abiding Citizen",
+	    "Published": "2009",
+	    "Genre": "Thriller",
+	    "Price": "9.99",
+	    "ThumbnailPath": "/covers/37.jpg",
+			"Description": "A frustrated man decides to take justice into his own hands after a plea bargain sets one of his family's killers free."
 	},
 	{
-		"Title": "Shutter Island",
-		"Published": "2010",
-		"Genre": "Thriller",
-		"Price": "9.99",
-		"ThumbnailPath": "/covers/38.jpg"
+	    "Title": "Shutter Island",
+	    "Published": "2010",
+	    "Genre": "Thriller",
+	    "Price": "9.99",
+	    "ThumbnailPath": "/covers/38.jpg",
+			"Description": "In 1954, a U.S. Marshal investigates the disappearance of a murderer who escaped from a hospital for the criminally insane."
 	},
 	{
-		"Title": "The Silence of the Lambs",
-		"Published": "1991",
-		"Genre": "Thriller",
-		"Price": "9.99",
-		"ThumbnailPath": "/covers/39.jpg"
+	    "Title": "The Silence of the Lambs",
+	    "Published": "1991",
+	    "Genre": "Thriller",
+	    "Price": "9.99",
+	    "ThumbnailPath": "/covers/39.jpg",
+			"Description": "A young F.B.I. cadet must receive the help of an incarcerated and manipulative cannibal killer to help catch another serial killer, a madman who skins his victims."
 	},
 	{
-		"Title": "Schindlers List",
-		"Published": "1993",
-		"Genre": "War",
-		"Price": "9.99",
-		"ThumbnailPath": "/covers/40.jpg"
+	    "Title": "Schindlers List",
+	    "Published": "1993",
+	    "Genre": "War",
+	    "Price": "9.99",
+	    "ThumbnailPath": "/covers/40.jpg",
+			"Description": "In German-occupied Poland during World War II, industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis."
 	},
 	{
-		"Title": "The Boy in the Striped Pyjamas",
-		"Published": "2008",
-		"Genre": "War",
-		"Price": "9.99",
-		"ThumbnailPath": "/covers/41.jpg"
+	    "Title": "The Boy in the Striped Pyjamas",
+	    "Published": "2008",
+	    "Genre": "War",
+	    "Price": "9.99",
+	    "ThumbnailPath": "/covers/41.jpg",
+			"Description": "Through the innocent eyes of Bruno, the eight-year-old son of the commandant at a German concentration camp, a forbidden friendship with a Jewish boy on the other side of the camp fence has startling and unexpected consequences."
 	},
 	{
-		"Title": "The Pianist",
-		"Published": "2002",
-		"Genre": "War",
-		"Price": "14.99",
-		"ThumbnailPath": "/covers/42.jpg"
+	    "Title": "The Pianist",
+	    "Published": "2002",
+	    "Genre": "War",
+	    "Price": "14.99",
+	    "ThumbnailPath": "/covers/42.jpg",
+			"Description": "A Polish Jewish musician struggles to survive the destruction of the Warsaw ghetto of World War II."
 	}
 ]

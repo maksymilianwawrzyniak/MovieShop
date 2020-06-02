@@ -10,21 +10,21 @@ namespace WebApplication.ViewModels
             
         }
 
-        public IndexPageViewModel(IEnumerable<Movie> movies, IEnumerable<string> genres)
+        public IndexPageViewModel(IEnumerable<MovieViewModel> movies, IEnumerable<string> genres)
         {
             Movies = movies;
             UserViewModel = new UserViewModel();
             Genres = genres;
         }
         
-        public IndexPageViewModel(IEnumerable<Movie> movies, UserViewModel userViewModel, IEnumerable<string> genres)
+        public IndexPageViewModel(IEnumerable<MovieViewModel> movies, UserViewModel userViewModel, IEnumerable<string> genres)
         {
             Movies = movies;
             UserViewModel = userViewModel;
             Genres = genres;
         }
         
-        public IEnumerable<Movie> Movies { get; set; }
+        public IEnumerable<MovieViewModel> Movies { get; set; }
         
         public UserViewModel UserViewModel { get; set; }
         

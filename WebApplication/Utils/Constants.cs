@@ -11,6 +11,7 @@
         public const string Surname = "Surname";
         
         public const string DirectedLabel = "directed";
+        public const string StarredLabel = "starred";
         public const string BoughtLabel = "bought";
 
     }

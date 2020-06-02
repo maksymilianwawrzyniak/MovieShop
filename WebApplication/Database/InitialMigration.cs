@@ -30,6 +30,7 @@ namespace WebApplication.Database
             await AddModels<User>("users.json");
 
             await AddDirectorMovieRelationship("directors-movies.json");
+            await AddActorMovieRelationship("actors-movies.json");
         }
 
         private async Task DropDatabase()
@@ -53,10 +54,23 @@ namespace WebApplication.Database
             var dtos = JsonConvert.DeserializeObject<IEnumerable<DirectorMovieRelationshipDto>>(content);
             foreach (var dto in dtos)
             {
-                dto.Director = await _connection.Find<Director>((Constants.Surname, dto.Director.Surname));
-                dto.Movie = await _connection.Find<Movie>((Constants.Title, dto.Movie.Title));
-                if (dto.Movie != null && dto.Director != null)
-                    await _connection.CreateDirectedRelationship(dto.Director, dto.Movie, Constants.DirectedLabel);
+                var director = await _connection.Find<Director>((Constants.Surname, dto.Director.Surname));
+                var movie = await _connection.Find<Movie>((Constants.Title, dto.Movie.Title));
+
+                await _connection.CreateDirectedRelationship(director, movie, Constants.DirectedLabel);
+            }
+        }
+
+        private async Task AddActorMovieRelationship(string filePath)
+        {
+            var content = await File.ReadAllTextAsync(filePath);
+            var dtos = JsonConvert.DeserializeObject<IEnumerable<ActorMovieRelationshipDto>>(content);
+            foreach (var dto in dtos)
+            {
+                var actor = await _connection.Find<Actor>((Constants.Surname, dto.Actor.Surname));
+                var movie = await _connection.Find<Movie>((Constants.Title, dto.Movie.Title));
+
+                await _connection.CreateDirectedRelationship(actor, movie, Constants.StarredLabel);
             }
         }
     }
