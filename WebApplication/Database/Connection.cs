@@ -173,7 +173,7 @@ namespace WebApplication.Database
             using var session = DatabaseSession.StartSession(_driver, _appSettings.DatabaseName);
 
             var query = new StringBuilder($"MATCH (x:{modelName} {{Id: '{model.Id}'}})\n");
-            query.Append("DELETE x");
+            query.Append("DETACH DELETE x");
             var queryContent = query.ToString();
             Console.WriteLine(queryContent);
             var cursor = await session.RunAsync(queryContent);

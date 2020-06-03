@@ -1,9 +1,11 @@
 ﻿using WebApplication.Models;
+using WebApplication.Database;
 
 namespace WebApplication.ViewModels
 {
     public class MovieViewModel
     {
+        private readonly Connection _connection;
         public MovieViewModel(Movie movie)
         {
             Id = movie.Id;
@@ -35,5 +37,6 @@ namespace WebApplication.ViewModels
         public string ThumbnailPath { get; set; }
 
         public int BoughtCount { get; set; }
+        
     }
 }

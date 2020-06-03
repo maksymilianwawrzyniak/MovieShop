@@ -43,6 +43,5 @@ namespace WebApplication.Controllers
             var movie = await _connection.Find<Movie>((Constants.Id, id));
             return View(new MovieViewModel(movie));
         }
-
     }
 }
