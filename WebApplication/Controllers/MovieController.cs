@@ -5,6 +5,7 @@ using Microsoft.Extensions.Logging;
 using WebApplication.Database;
 using WebApplication.Models;
 using WebApplication.Utils;
+using WebApplication.ViewModels;
 
 namespace WebApplication.Controllers
 {
@@ -35,5 +36,13 @@ namespace WebApplication.Controllers
 
             return Redirect("/");
         }
+        
+        [Route("/movie/{id}", Name = "ShowMovie")]
+        public async Task<IActionResult> ShowMovie(string id)
+        {
+            var movie = await _connection.Find<Movie>((Constants.Id, id));
+            return View(new MovieViewModel(movie));
+        }
+
     }
 }

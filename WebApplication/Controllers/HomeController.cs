@@ -62,13 +62,5 @@ namespace WebApplication.Controllers
             _logger.Log(LogLevel.Error, errorViewModel.ToString());
             return View(errorViewModel);
         }
-
-        [Route("/movie/{id}", Name = "ShowMovie")]
-        public async Task<IActionResult> ShowMovie(string id)
-        {
-            var user = SessionUtil.GetUser(_httpContextAccessor);
-            var movie = await _connection.Find<Movie>((Constants.Id, id));
-            return RedirectToAction(nameof(Index));
-        }
     }
 }

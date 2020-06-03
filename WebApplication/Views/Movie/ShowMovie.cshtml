@@ -1,0 +1,28 @@
+﻿@model WebApplication.ViewModels.MovieViewModel
+<div class="container-fluid">
+    <div class="row">
+        <div id="cover" class="col-5">
+            <img src="@Model.ThumbnailPath" class="img-thumbnail mx-auto d-block" alt="@Model.Title"/>
+        </div>
+        <div id="title" class="col-7">
+            <div class="row">
+                <div class="h3">@Model.Title</div>
+            </div>
+            <div class="row">
+                <div class="h5">@Model.Published</div>
+            </div>
+            <div class="row">
+                <div class="h5">Genre: @Model.Genre</div>
+            </div>
+            <div class="row">
+                <div class="h4">Price: $@Model.Price</div>
+            </div>
+            <div>
+                <a asp-controller="Movie" asp-action="BuyMovie" asp-route-id="@Model.Id" class="btn-primary">Buy movie</a>
+            </div>
+        </div>
+        <div class="container-fluid text-body justify-content-center mt-3">
+            @Model.Description
+        </div>
+    </div>
+</div>
