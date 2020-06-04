@@ -15,13 +15,31 @@
                 <div class="h5">Genre: @Model.Genre</div>
             </div>
             <div class="row">
-                <div class="h4">Price: $@Model.Price</div>
-            </div>
-            <div class="row">
-                <div class="h5"></div>
+                <div class="h5">
+                    Actors: <br/>
+                </div>
             </div>
             <div>
-                <a asp-controller="Movie" asp-action="BuyMovie" asp-route-id="@Model.Id" class="btn-primary">BUY MOVIE</a>
+                @foreach (var actor in Model.Actors)
+                {
+                    <div>
+                        <text>@actor.ToString()</text>
+                    </div>
+                }
+            </div>
+            <div class="row">
+                <div class="h5">
+                    <text>Director:</text>
+                </div>
+            </div>
+            <div>
+                @Model.Director.ToString()
+            </div>
+            <div class="row">
+                <div class="h4">Price: $@Model.Price</div>
+            </div>
+            <div>
+                <a asp-controller="Movie" asp-action="BuyMovie" asp-route-id="@Model.Id" class="btn-primary">Buy movie</a>
             </div>
         </div>
         <div class="container-fluid text-body justify-content-center mt-3">

@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -41,7 +42,12 @@ namespace WebApplication.Controllers
         public async Task<IActionResult> ShowMovie(string id)
         {
             var movie = await _connection.Find<Movie>((Constants.Id, id));
-            return View(new MovieViewModel(movie));
+            var actors = await _connection.FindAllByRelationship<Movie, Actor>(movie, Constants.StarredLabel);
+            var director = (await _connection.FindAllByRelationship<Movie, Director>(movie, Constants.DirectedLabel))
+                .FirstOrDefault();
+            var movieViewModel = new MovieViewModel(movie, actors, director);
+            return View(movieViewModel);
         }
+
     }
 }

@@ -1,11 +1,10 @@
-﻿using WebApplication.Models;
-using WebApplication.Database;
+﻿using System.Collections.Generic;
+using WebApplication.Models;
 
 namespace WebApplication.ViewModels
 {
     public class MovieViewModel
     {
-        private readonly Connection _connection;
         public MovieViewModel(Movie movie)
         {
             Id = movie.Id;
@@ -15,6 +14,12 @@ namespace WebApplication.ViewModels
             Published = movie.Published;
             Price = movie.Price;
             ThumbnailPath = movie.ThumbnailPath;
+        }
+
+        public MovieViewModel(Movie movie, IEnumerable<Actor> actors, Director director) : this(movie)
+        {
+            Actors = actors;
+            Director = director;
         }
 
         public MovieViewModel(Movie movie, int boughtCount) : this(movie)
@@ -38,5 +43,8 @@ namespace WebApplication.ViewModels
 
         public int BoughtCount { get; set; }
         
+        public IEnumerable<Actor> Actors { get; set; }
+        
+        public Director Director { get; set; }
     }
 }

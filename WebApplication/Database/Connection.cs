@@ -7,6 +7,7 @@ using Neo4j.Driver;
 using Neo4jMapper;
 using ServiceStack;
 using WebApplication.Models;
+using WebApplication.Utils;
 
 namespace WebApplication.Database
 {
@@ -80,11 +81,11 @@ namespace WebApplication.Database
         }
 
         /// <summary>
-        ///     Find single node with label corresponding to the T type and parameters passed.
+        ///     Find nodes with label corresponding to the T type and parameters passed.
         /// </summary>
         /// <param name="parameter">Tuple (parameter name, parameter value) which will be used in the search.</param>
         /// <typeparam name="T">Type of the Model that will be searched in the database.</typeparam>
-        public async Task<IEnumerable<T>> FindAll<T>((string, string) parameter) where T : BaseModel
+        public async Task<IEnumerable<T>> FindAllForLabel<T>((string, string) parameter) where T : BaseModel
         {
             var modelName = typeof(T).Name;
             var (key, value) = parameter;
@@ -132,6 +133,34 @@ namespace WebApplication.Database
         }
 
         /// <summary>
+        ///     Find all nodes for TV type that are connected to model T with specified relationship. 
+        /// </summary>
+        /// <param name="startModel">Model from which search is started and to which relationships are directed.</param>
+        /// <param name="relationshipLabel">Label of the relationships.</param>
+        /// <typeparam name="T">Type of model from which relationships are directed.</typeparam>
+        /// <typeparam name="TV">Type of models returned.</typeparam>
+        public async Task<IEnumerable<TV>> FindAllByRelationship<T, TV>(T startModel, string relationshipLabel)
+            where T : BaseModel where TV : BaseModel
+        {
+            var fromModelName = typeof(T).Name;
+            var searchedModelName = typeof(TV).Name;
+            using var session = DatabaseSession.StartSession(_driver, _appSettings.DatabaseName);
+
+            var query = new StringBuilder($"MATCH (x:{fromModelName}");
+            query.Append($" {{{Constants.Id}: '{startModel.Id}'}})");
+            query.Append($"<-[r:{relationshipLabel}]-");
+            query.AppendLine($"(y:{searchedModelName})");
+            query.AppendLine("RETURN y");
+
+            var queryContent = query.ToString();
+            Console.WriteLine(queryContent);
+
+            var cursor = await session.RunAsync(queryContent);
+            var result = (await cursor.ToListAsync()).Map<TV>();
+            return result;
+        }
+
+        /// <summary>
         ///     Update model of given ID with data from the passed model.
         /// </summary>
         /// <param name="id">ID of the model that data will be replaced.</param>
@@ -173,7 +202,7 @@ namespace WebApplication.Database
             using var session = DatabaseSession.StartSession(_driver, _appSettings.DatabaseName);
 
             var query = new StringBuilder($"MATCH (x:{modelName} {{Id: '{model.Id}'}})\n");
-            query.Append("DETACH DELETE x");
+            query.Append("DELETE x");
             var queryContent = query.ToString();
             Console.WriteLine(queryContent);
             var cursor = await session.RunAsync(queryContent);

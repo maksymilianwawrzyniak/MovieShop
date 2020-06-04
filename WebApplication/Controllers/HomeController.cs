@@ -31,7 +31,7 @@ namespace WebApplication.Controllers
         {
             var movies = genre.IsNullOrEmpty()
                 ? await _connection.GetAllOfLabel<Movie>()
-                : await _connection.FindAll<Movie>((Constants.Genre, genre));
+                : await _connection.FindAllForLabel<Movie>((Constants.Genre, genre));
             var genres = new HashSet<string>((await _connection.GetAllOfLabel<Movie>()).Select(x => x.Genre));
             var movieViewModels = new List<MovieViewModel>();
             foreach (var movie in movies)
